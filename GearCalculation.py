@@ -73,11 +73,9 @@ print('Y Kraft Lager B =', round(res[3],1), 'N')
 print('Z Kraft Lager B =', round(res[4],1), 'N')
 #np.allclose(np.dot(A, res), vb)
 x, m1, m2, mg = [], [],[], []
-i = 0.01
 f_a = res[0]
-while i <= (a+b):
-    x.append(i)
-    i+=0.001
+x = np.arange(0.0,a+b,0.001)
+print (x)
 for xp in x:
     if xp < a:
         mq = res[0]*xp
@@ -171,10 +169,7 @@ print('##############################################################')
 
 
 x, m1, m2, mg = [], [],[], []
-i = 0.0
-while i <= (c+e):
-    x.append(i)
-    i+=0.001
+x = np.arange(0.0,c+e,0.001)
 for xp in x:
     if xp <= e:
         mq=(-res[2]*(xp))
